@@ -131,7 +131,7 @@ extension UIImageView {
             case .success(let image):
                 imageView.image = image.image
             case .failure(_):
-                print("Failed to load provider image via Kingfisher.")
+                print("Failed to load image via Kingfisher.")
             }
         }
     }
