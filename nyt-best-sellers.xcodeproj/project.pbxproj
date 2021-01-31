@@ -10,6 +10,7 @@
 		8184D1F4EB215F7132F8F66C /* Pods_nyt_best_selllersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6143B860BAD062E1C3A4E70 /* Pods_nyt_best_selllersTests.framework */; };
 		8D15514FC9681466DA9F358F /* Pods_nyt_best_selllers_nyt_best_selllersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD5320C2D29E1DC45338F45 /* Pods_nyt_best_selllers_nyt_best_selllersUITests.framework */; };
 		AD6E8C3325C737400015E410 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E8C3225C737400015E410 /* Config.swift */; };
+		AD6E8C3B25C748370015E410 /* BookSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E8C3A25C748370015E410 /* BookSectionHeaderView.swift */; };
 		ADD1E90625C5C12700E0DE96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1E90525C5C12700E0DE96 /* AppDelegate.swift */; };
 		ADD1E90825C5C12700E0DE96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1E90725C5C12700E0DE96 /* SceneDelegate.swift */; };
 		ADD1E90A25C5C12700E0DE96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1E90925C5C12700E0DE96 /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 		8EAB3C0A53F9A733640099F5 /* Pods-nyt-best-selllers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nyt-best-selllers.debug.xcconfig"; path = "Target Support Files/Pods-nyt-best-selllers/Pods-nyt-best-selllers.debug.xcconfig"; sourceTree = "<group>"; };
 		9676E3CD19576DE4BD7974E0 /* Pods-nyt-best-selllersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nyt-best-selllersTests.debug.xcconfig"; path = "Target Support Files/Pods-nyt-best-selllersTests/Pods-nyt-best-selllersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD6E8C3225C737400015E410 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		AD6E8C3A25C748370015E410 /* BookSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSectionHeaderView.swift; sourceTree = "<group>"; };
 		ADD1E90225C5C12700E0DE96 /* nyt-best-sellers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nyt-best-sellers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD1E90525C5C12700E0DE96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADD1E90725C5C12700E0DE96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			children = (
 				ADD1E90925C5C12700E0DE96 /* ViewController.swift */,
 				ADD1E95725C61F9A00E0DE96 /* BookCell.swift */,
+				AD6E8C3A25C748370015E410 /* BookSectionHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 			files = (
 				ADD1E94A25C5D90200E0DE96 /* Book.swift in Sources */,
 				ADD1E96225C62FA400E0DE96 /* BookViewModel.swift in Sources */,
+				AD6E8C3B25C748370015E410 /* BookSectionHeaderView.swift in Sources */,
 				ADD1E90A25C5C12700E0DE96 /* ViewController.swift in Sources */,
 				ADD1E90625C5C12700E0DE96 /* AppDelegate.swift in Sources */,
 				AD6E8C3325C737400015E410 /* Config.swift in Sources */,

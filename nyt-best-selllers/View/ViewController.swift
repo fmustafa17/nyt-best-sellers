@@ -54,6 +54,15 @@ class ViewController: UIViewController {
             books = bookResponse.results.books
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+
+        if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath) as? BookSectionHeaderView {
+            sectionHeader.sectionHeaderLabel.text = "Placeholder"
+            return sectionHeader
+        }
+        return UICollectionReusableView()
+    }
 
 }
 
