@@ -20,7 +20,6 @@
 		ADD1E92825C5C12800E0DE96 /* nyt_best_selllersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1E92725C5C12800E0DE96 /* nyt_best_selllersUITests.swift */; };
 		ADD1E94A25C5D90200E0DE96 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1E94925C5D90200E0DE96 /* Book.swift */; };
 		ADD1E95825C61F9A00E0DE96 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1E95725C61F9A00E0DE96 /* BookCell.swift */; };
-		ADD1E95D25C62EC700E0DE96 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1E95C25C62EC700E0DE96 /* BookService.swift */; };
 		ADD1E96225C62FA400E0DE96 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1E96125C62FA400E0DE96 /* BookViewModel.swift */; };
 		B7C9CD9077281225DE4F0E88 /* Pods_nyt_best_selllers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA73580BFEF66AD8FFA5ABC /* Pods_nyt_best_selllers.framework */; };
 /* End PBXBuildFile section */
@@ -67,7 +66,6 @@
 		ADD1E92925C5C12800E0DE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADD1E94925C5D90200E0DE96 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		ADD1E95725C61F9A00E0DE96 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
-		ADD1E95C25C62EC700E0DE96 /* BookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
 		ADD1E96125C62FA400E0DE96 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		B6143B860BAD062E1C3A4E70 /* Pods_nyt_best_selllersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nyt_best_selllersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B784627367166B0552F36FB6 /* Pods-nyt-best-selllersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nyt-best-selllersTests.release.xcconfig"; path = "Target Support Files/Pods-nyt-best-selllersTests/Pods-nyt-best-selllersTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				ADD1E93925C5CE7B00E0DE96 /* Model */,
-				ADD1E93A25C5CE7B00E0DE96 /* Service */,
 				ADD1E93B25C5CE7B00E0DE96 /* View */,
 				ADD1E93825C5CE7B00E0DE96 /* ViewModel */,
 				ADD1E90525C5C12700E0DE96 /* AppDelegate.swift */,
@@ -173,14 +170,6 @@
 				ADD1E94925C5D90200E0DE96 /* Book.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		ADD1E93A25C5CE7B00E0DE96 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				ADD1E95C25C62EC700E0DE96 /* BookService.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		ADD1E93B25C5CE7B00E0DE96 /* View */ = {
@@ -456,7 +445,6 @@
 				ADD1E94A25C5D90200E0DE96 /* Book.swift in Sources */,
 				ADD1E96225C62FA400E0DE96 /* BookViewModel.swift in Sources */,
 				ADD1E90A25C5C12700E0DE96 /* ViewController.swift in Sources */,
-				ADD1E95D25C62EC700E0DE96 /* BookService.swift in Sources */,
 				ADD1E90625C5C12700E0DE96 /* AppDelegate.swift in Sources */,
 				AD6E8C3325C737400015E410 /* Config.swift in Sources */,
 				ADD1E90825C5C12700E0DE96 /* SceneDelegate.swift in Sources */,
