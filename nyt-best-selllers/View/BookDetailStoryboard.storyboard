@@ -51,20 +51,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fng-19-6Nr">
-                                <rect key="frame" x="192" y="540" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Buy"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fng-19-6Nr">
+                                <rect key="frame" x="20" y="540" width="374" height="30"/>
+                                <state key="normal" title="Buy via.."/>
+                                <connections>
+                                    <action selector="openActionSheet:" destination="Eha-A4-EO8" eventType="touchUpInside" id="jvs-0F-gOo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aVI-C6-8oX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fDJ-Il-tRR" firstAttribute="leading" secondItem="aVI-C6-8oX" secondAttribute="leading" constant="100" id="8W2-zH-ZyC"/>
+                            <constraint firstItem="fng-19-6Nr" firstAttribute="leading" secondItem="aVI-C6-8oX" secondAttribute="leading" constant="20" id="ACg-AX-791"/>
                             <constraint firstItem="aVI-C6-8oX" firstAttribute="trailing" secondItem="fDJ-Il-tRR" secondAttribute="trailing" constant="100" id="Dpe-Ay-epV"/>
                             <constraint firstItem="5bS-3o-PNL" firstAttribute="leading" secondItem="40v-o3-kNs" secondAttribute="leading" id="ILA-lg-cD5"/>
+                            <constraint firstItem="fng-19-6Nr" firstAttribute="top" secondItem="Ytg-zE-zm1" secondAttribute="bottom" constant="62" id="JIz-iF-lch"/>
+                            <constraint firstItem="fng-19-6Nr" firstAttribute="centerX" secondItem="40v-o3-kNs" secondAttribute="centerX" id="OvB-0A-vjt"/>
                             <constraint firstItem="Ytg-zE-zm1" firstAttribute="leading" secondItem="aVI-C6-8oX" secondAttribute="leading" constant="20" id="SJv-iS-TBf"/>
                             <constraint firstItem="aVI-C6-8oX" firstAttribute="trailing" secondItem="H0A-tK-5HG" secondAttribute="trailing" id="Sil-Dv-aGe"/>
+                            <constraint firstItem="aVI-C6-8oX" firstAttribute="trailing" secondItem="fng-19-6Nr" secondAttribute="trailing" constant="20" id="bIU-eq-bHf"/>
                             <constraint firstItem="aVI-C6-8oX" firstAttribute="trailing" secondItem="Ytg-zE-zm1" secondAttribute="trailing" constant="20" id="bmZ-gG-C2Q"/>
                             <constraint firstItem="H0A-tK-5HG" firstAttribute="top" secondItem="fDJ-Il-tRR" secondAttribute="bottom" constant="25" id="mA7-4s-y9s"/>
                             <constraint firstItem="fDJ-Il-tRR" firstAttribute="top" secondItem="aVI-C6-8oX" secondAttribute="top" constant="20" id="mn1-KL-ywO"/>
@@ -78,6 +84,7 @@
                     <connections>
                         <outlet property="authorLabel" destination="jKx-Vn-8Fb" id="D2Y-pc-6BI"/>
                         <outlet property="bookCoverImage" destination="fDJ-Il-tRR" id="Sze-gT-Cgz"/>
+                        <outlet property="buyButton" destination="fng-19-6Nr" id="Yuz-D3-skk"/>
                         <outlet property="descriptionLabel" destination="Ytg-zE-zm1" id="ZXe-mO-rio"/>
                         <outlet property="titleLabel" destination="vcs-zv-uwg" id="UNv-kc-10Z"/>
                     </connections>

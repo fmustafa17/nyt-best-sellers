@@ -6,14 +6,16 @@
 //
 
 import UIKit
+import SafariServices
 
-class BookDetailViewController: UIViewController {
+class BookDetailViewController: UIViewController, SFSafariViewControllerDelegate {
     var selectedBook: Book?
     @IBOutlet weak var bookCoverImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
+    @IBOutlet weak var buyButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         showBookDetails()
@@ -25,5 +27,35 @@ class BookDetailViewController: UIViewController {
         titleLabel.text = book.title
         authorLabel.text = book.author
         descriptionLabel.text = book.description
+    }
+    
+    @IBAction func openActionSheet(_ sender: Any) {
+        guard let book = selectedBook else { return }
+        
+        let amazonAction = UIAlertAction(title: "\(book.buy_links[0].name)", style: .default) { _ in
+            if let url = URL(string: book.buy_links[0].url) {
+                if UIApplication.shared.canOpenURL(url) {
+                    let safariVC = SFSafariViewController(url: url)
+                    safariVC.delegate = self
+                    self.present(safariVC, animated: true)
+                }
+            }
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+
+        // Create and configure the alert controller.
+        let alert = UIAlertController(title: "Buy via...", message: "", preferredStyle: .actionSheet)
+        alert.addAction(amazonAction)
+        alert.addAction(cancelAction)
+        
+        // On iPad, action sheets must be presented from a popover.
+        alert.popoverPresentationController?.barButtonItem = nil
+
+        self.present(alert, animated: true)
+    }
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
     }
 }
