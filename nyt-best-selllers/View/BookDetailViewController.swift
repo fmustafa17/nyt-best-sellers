@@ -31,22 +31,24 @@ class BookDetailViewController: UIViewController, SFSafariViewControllerDelegate
     
     @IBAction func openActionSheet(_ sender: Any) {
         guard let book = selectedBook else { return }
-        
-        let amazonAction = UIAlertAction(title: "\(book.buy_links[0].name)", style: .default) { _ in
-            if let url = URL(string: book.buy_links[0].url) {
-                if UIApplication.shared.canOpenURL(url) {
-                    let safariVC = SFSafariViewController(url: url)
-                    safariVC.delegate = self
-                    self.present(safariVC, animated: true)
-                }
-            }
-        }
-
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
 
         // Create and configure the alert controller.
         let alert = UIAlertController(title: "Buy via...", message: "", preferredStyle: .actionSheet)
-        alert.addAction(amazonAction)
+        
+        for buyLink in book.buy_links {
+            let action = UIAlertAction(title: "\(buyLink.name)", style: .default) { _ in
+                if let url = URL(string: buyLink.url) {
+                    if UIApplication.shared.canOpenURL(url) {
+                        let safariVC = SFSafariViewController(url: url)
+                        safariVC.delegate = self
+                        self.present(safariVC, animated: true)
+                    }
+                }
+            }
+            alert.addAction(action)
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         alert.addAction(cancelAction)
         
         // On iPad, action sheets must be presented from a popover.
