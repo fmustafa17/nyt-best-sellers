@@ -85,8 +85,8 @@ extension ViewController: UICollectionViewDataSource {
 extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let bundle = Bundle(for: type(of: self))
-        let bookDetailStoryboard = UIStoryboard(name: "BookDetailStoryboard", bundle: bundle)
-        let vc = bookDetailStoryboard.instantiateViewController(withIdentifier: "BookDetail") as! BookDetailViewController
+        let bookDetailStoryboard = UIStoryboard(name: StoryboardName.bookDetail, bundle: bundle)
+        let vc = bookDetailStoryboard.instantiateViewController(withIdentifier: Identifier.bookDetail) as! BookDetailViewController
         vc.selectedBook = books[indexPath.row]
 
         self.navigationController?.pushViewController(vc, animated: true)
