@@ -29,8 +29,7 @@ class ViewController: UIViewController {
         loadBookDataFromService()
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        self.navigationController?.title = "Best Seller Books"
+        self.title = "New York Times Best Seller Books"
     }
     
     override func viewDidLayoutSubviews() {
