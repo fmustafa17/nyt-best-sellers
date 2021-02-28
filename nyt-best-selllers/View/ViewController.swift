@@ -37,20 +37,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = BookViewModel()
-        loadBookDataFromService()
-        
-        // Initialize the collection views, set the desired frames
-//        collectionView.delegate = self
-//        collectionView.dataSource = self
-//
-//        collectionView2.delegate = self
-//        collectionView2.delegate = self
-//
-//        collectionView3.dataSource = self
-//        collectionView3.dataSource = self
-        
-        // Register the cells
-//        collectionView1.register(BookCell.self, forCellWithReuseIdentifier: "BookCell")
+        loadBookDataFromService
         
         self.title = "New York Times Best Seller Books"
     }
@@ -78,21 +65,6 @@ class ViewController: UIViewController {
             books = bookResponse.results.books
         }
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//
-//        if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath) as? BookSectionHeaderView {
-//            for name in displayNames {
-////                if let title = categories[name] {
-////                    sectionHeader.sectionHeaderLabel.text = title
-////                }
-//                sectionHeader.sectionHeaderLabel.text = name
-//                sectionHeader.sectionHeaderLabel.textAlignment = .left
-//            }
-//            return sectionHeader
-//        }
-//        return UICollectionReusableView()
-//    }
 
 }
 
@@ -146,22 +118,6 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         let widthPerItem = availableWidth
         return CGSize(width: widthPerItem, height: widthPerItem)
       }
-//
-//      func collectionView(_ collectionView: UICollectionView,
-//                          layout collectionViewLayout: UICollectionViewLayout,
-//                          insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return sectionInsets
-//      }
-//
-//      func collectionView(_ collectionView: UICollectionView,
-//                          layout collectionViewLayout: UICollectionViewLayout,
-//                          minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return sectionInsets.left
-//      }
-    
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return displayNames.count
-//    }
 }
 
 extension UIImageView {
