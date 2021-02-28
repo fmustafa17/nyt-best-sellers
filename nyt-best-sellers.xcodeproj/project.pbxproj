@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8184D1F4EB215F7132F8F66C /* Pods_nyt_best_selllersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6143B860BAD062E1C3A4E70 /* Pods_nyt_best_selllersTests.framework */; };
-		8D15514FC9681466DA9F358F /* Pods_nyt_best_selllers_nyt_best_selllersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD5320C2D29E1DC45338F45 /* Pods_nyt_best_selllers_nyt_best_selllersUITests.framework */; };
+		A3B5398DEE56EFEC38B01B8F /* Pods_nyt_best_sellersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E6FF1CEF827E14E06B7F58 /* Pods_nyt_best_sellersTests.framework */; };
 		AD6E8C3325C737400015E410 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E8C3225C737400015E410 /* Config.swift */; };
 		AD6E8C3B25C748370015E410 /* BookSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E8C3A25C748370015E410 /* BookSectionHeaderView.swift */; };
 		AD6E8C4025C74C610015E410 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E8C3F25C74C610015E410 /* BookDetailViewController.swift */; };
@@ -25,8 +24,11 @@
 		ADD1E94A25C5D90200E0DE96 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1E94925C5D90200E0DE96 /* Book.swift */; };
 		ADD1E95825C61F9A00E0DE96 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1E95725C61F9A00E0DE96 /* BookCell.swift */; };
 		ADD1E96225C62FA400E0DE96 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD1E96125C62FA400E0DE96 /* BookViewModel.swift */; };
+		ADDDDC6225EC2B3600CBA280 /* BookCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDDDC6125EC2B3600CBA280 /* BookCell2.swift */; };
+		ADDDDC7225EC2E7400CBA280 /* BookCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDDDC7125EC2E7400CBA280 /* BookCell3.swift */; };
 		ADE6651B25D0573A006F16F1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6651A25D0573A006F16F1 /* Constants.swift */; };
-		B7C9CD9077281225DE4F0E88 /* Pods_nyt_best_selllers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA73580BFEF66AD8FFA5ABC /* Pods_nyt_best_selllers.framework */; };
+		C5997E28B7E15304FA49641F /* Pods_nyt_best_sellers_nyt_best_sellersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D357C7C1292DE307E65150C /* Pods_nyt_best_sellers_nyt_best_sellersUITests.framework */; };
+		DADB902E073ABADA6B8C3253 /* Pods_nyt_best_sellers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401E8820E19663BE7C4909B5 /* Pods_nyt_best_sellers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,13 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BA73580BFEF66AD8FFA5ABC /* Pods_nyt_best_selllers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nyt_best_selllers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		40D7FE94189224026E4286B3 /* Pods-nyt-best-selllers-nyt-best-selllersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nyt-best-selllers-nyt-best-selllersUITests.release.xcconfig"; path = "Target Support Files/Pods-nyt-best-selllers-nyt-best-selllersUITests/Pods-nyt-best-selllers-nyt-best-selllersUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5801E38992E79BCE1295DDA8 /* Pods-nyt-best-selllers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nyt-best-selllers.release.xcconfig"; path = "Target Support Files/Pods-nyt-best-selllers/Pods-nyt-best-selllers.release.xcconfig"; sourceTree = "<group>"; };
-		7FD5320C2D29E1DC45338F45 /* Pods_nyt_best_selllers_nyt_best_selllersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nyt_best_selllers_nyt_best_selllersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81A0EF290BE1D53F16DAD2B5 /* Pods-nyt-best-selllers-nyt-best-selllersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nyt-best-selllers-nyt-best-selllersUITests.debug.xcconfig"; path = "Target Support Files/Pods-nyt-best-selllers-nyt-best-selllersUITests/Pods-nyt-best-selllers-nyt-best-selllersUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8EAB3C0A53F9A733640099F5 /* Pods-nyt-best-selllers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nyt-best-selllers.debug.xcconfig"; path = "Target Support Files/Pods-nyt-best-selllers/Pods-nyt-best-selllers.debug.xcconfig"; sourceTree = "<group>"; };
-		9676E3CD19576DE4BD7974E0 /* Pods-nyt-best-selllersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nyt-best-selllersTests.debug.xcconfig"; path = "Target Support Files/Pods-nyt-best-selllersTests/Pods-nyt-best-selllersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1CEA1792EE2F58F615C9C867 /* Pods-nyt-best-sellers-nyt-best-sellersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nyt-best-sellers-nyt-best-sellersUITests.release.xcconfig"; path = "Target Support Files/Pods-nyt-best-sellers-nyt-best-sellersUITests/Pods-nyt-best-sellers-nyt-best-sellersUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2B375DE0002813CD9A1F25C0 /* Pods-nyt-best-sellersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nyt-best-sellersTests.debug.xcconfig"; path = "Target Support Files/Pods-nyt-best-sellersTests/Pods-nyt-best-sellersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		401E8820E19663BE7C4909B5 /* Pods_nyt_best_sellers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nyt_best_sellers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E6FF1CEF827E14E06B7F58 /* Pods_nyt_best_sellersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nyt_best_sellersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88DE3337E20187E00F7DD4EF /* Pods-nyt-best-sellers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nyt-best-sellers.debug.xcconfig"; path = "Target Support Files/Pods-nyt-best-sellers/Pods-nyt-best-sellers.debug.xcconfig"; sourceTree = "<group>"; };
+		9D357C7C1292DE307E65150C /* Pods_nyt_best_sellers_nyt_best_sellersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nyt_best_sellers_nyt_best_sellersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAB8797B0F38C99EC06FCD91 /* Pods-nyt-best-sellersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nyt-best-sellersTests.release.xcconfig"; path = "Target Support Files/Pods-nyt-best-sellersTests/Pods-nyt-best-sellersTests.release.xcconfig"; sourceTree = "<group>"; };
 		AD6E8C3225C737400015E410 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		AD6E8C3A25C748370015E410 /* BookSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSectionHeaderView.swift; sourceTree = "<group>"; };
 		AD6E8C3F25C74C610015E410 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
@@ -76,9 +78,11 @@
 		ADD1E94925C5D90200E0DE96 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		ADD1E95725C61F9A00E0DE96 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		ADD1E96125C62FA400E0DE96 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		ADDDDC6125EC2B3600CBA280 /* BookCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell2.swift; sourceTree = "<group>"; };
+		ADDDDC7125EC2E7400CBA280 /* BookCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell3.swift; sourceTree = "<group>"; };
 		ADE6651A25D0573A006F16F1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		B6143B860BAD062E1C3A4E70 /* Pods_nyt_best_selllersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nyt_best_selllersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B784627367166B0552F36FB6 /* Pods-nyt-best-selllersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nyt-best-selllersTests.release.xcconfig"; path = "Target Support Files/Pods-nyt-best-selllersTests/Pods-nyt-best-selllersTests.release.xcconfig"; sourceTree = "<group>"; };
+		DA4B23939237B8F186DB630D /* Pods-nyt-best-sellers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nyt-best-sellers.release.xcconfig"; path = "Target Support Files/Pods-nyt-best-sellers/Pods-nyt-best-sellers.release.xcconfig"; sourceTree = "<group>"; };
+		E82D7A10A466CB968EDA8AB9 /* Pods-nyt-best-sellers-nyt-best-sellersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nyt-best-sellers-nyt-best-sellersUITests.debug.xcconfig"; path = "Target Support Files/Pods-nyt-best-sellers-nyt-best-sellersUITests/Pods-nyt-best-sellers-nyt-best-sellersUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7C9CD9077281225DE4F0E88 /* Pods_nyt_best_selllers.framework in Frameworks */,
+				DADB902E073ABADA6B8C3253 /* Pods_nyt_best_sellers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8184D1F4EB215F7132F8F66C /* Pods_nyt_best_selllersTests.framework in Frameworks */,
+				A3B5398DEE56EFEC38B01B8F /* Pods_nyt_best_sellersTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D15514FC9681466DA9F358F /* Pods_nyt_best_selllers_nyt_best_selllersUITests.framework in Frameworks */,
+				C5997E28B7E15304FA49641F /* Pods_nyt_best_sellers_nyt_best_sellersUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +196,8 @@
 				AD6E8C3A25C748370015E410 /* BookSectionHeaderView.swift */,
 				AD6E8C3F25C74C610015E410 /* BookDetailViewController.swift */,
 				AD6E8C4425C74DFA0015E410 /* BookDetailStoryboard.storyboard */,
+				ADDDDC6125EC2B3600CBA280 /* BookCell2.swift */,
+				ADDDDC7125EC2E7400CBA280 /* BookCell3.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,9 +213,9 @@
 		B7B57FE0FF853FA8EB463818 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0BA73580BFEF66AD8FFA5ABC /* Pods_nyt_best_selllers.framework */,
-				7FD5320C2D29E1DC45338F45 /* Pods_nyt_best_selllers_nyt_best_selllersUITests.framework */,
-				B6143B860BAD062E1C3A4E70 /* Pods_nyt_best_selllersTests.framework */,
+				401E8820E19663BE7C4909B5 /* Pods_nyt_best_sellers.framework */,
+				9D357C7C1292DE307E65150C /* Pods_nyt_best_sellers_nyt_best_sellersUITests.framework */,
+				52E6FF1CEF827E14E06B7F58 /* Pods_nyt_best_sellersTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -217,12 +223,12 @@
 		D8C178DB5006263A3D1B1547 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8EAB3C0A53F9A733640099F5 /* Pods-nyt-best-selllers.debug.xcconfig */,
-				5801E38992E79BCE1295DDA8 /* Pods-nyt-best-selllers.release.xcconfig */,
-				81A0EF290BE1D53F16DAD2B5 /* Pods-nyt-best-selllers-nyt-best-selllersUITests.debug.xcconfig */,
-				40D7FE94189224026E4286B3 /* Pods-nyt-best-selllers-nyt-best-selllersUITests.release.xcconfig */,
-				9676E3CD19576DE4BD7974E0 /* Pods-nyt-best-selllersTests.debug.xcconfig */,
-				B784627367166B0552F36FB6 /* Pods-nyt-best-selllersTests.release.xcconfig */,
+				88DE3337E20187E00F7DD4EF /* Pods-nyt-best-sellers.debug.xcconfig */,
+				DA4B23939237B8F186DB630D /* Pods-nyt-best-sellers.release.xcconfig */,
+				E82D7A10A466CB968EDA8AB9 /* Pods-nyt-best-sellers-nyt-best-sellersUITests.debug.xcconfig */,
+				1CEA1792EE2F58F615C9C867 /* Pods-nyt-best-sellers-nyt-best-sellersUITests.release.xcconfig */,
+				2B375DE0002813CD9A1F25C0 /* Pods-nyt-best-sellersTests.debug.xcconfig */,
+				AAB8797B0F38C99EC06FCD91 /* Pods-nyt-best-sellersTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -374,7 +380,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-nyt-best-selllers-nyt-best-selllersUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-nyt-best-sellers-nyt-best-sellersUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -387,15 +393,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-nyt-best-selllers/Pods-nyt-best-selllers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-nyt-best-sellers/Pods-nyt-best-sellers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-nyt-best-selllers/Pods-nyt-best-selllers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-nyt-best-sellers/Pods-nyt-best-sellers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nyt-best-selllers/Pods-nyt-best-selllers-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nyt-best-sellers/Pods-nyt-best-sellers-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B8B4566755F7AE2DE4A59C29 /* [CP] Check Pods Manifest.lock */ = {
@@ -413,7 +419,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-nyt-best-selllers-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-nyt-best-sellers-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -435,7 +441,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-nyt-best-selllersTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-nyt-best-sellersTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -448,15 +454,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-nyt-best-selllers-nyt-best-selllersUITests/Pods-nyt-best-selllers-nyt-best-selllersUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-nyt-best-sellers-nyt-best-sellersUITests/Pods-nyt-best-sellers-nyt-best-sellersUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-nyt-best-selllers-nyt-best-selllersUITests/Pods-nyt-best-selllers-nyt-best-selllersUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-nyt-best-sellers-nyt-best-sellersUITests/Pods-nyt-best-sellers-nyt-best-sellersUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nyt-best-selllers-nyt-best-selllersUITests/Pods-nyt-best-selllers-nyt-best-selllersUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nyt-best-sellers-nyt-best-sellersUITests/Pods-nyt-best-sellers-nyt-best-sellersUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -469,6 +475,7 @@
 				ADD1E94A25C5D90200E0DE96 /* Book.swift in Sources */,
 				ADE6651B25D0573A006F16F1 /* Constants.swift in Sources */,
 				ADD1E96225C62FA400E0DE96 /* BookViewModel.swift in Sources */,
+				ADDDDC7225EC2E7400CBA280 /* BookCell3.swift in Sources */,
 				AD6E8C3B25C748370015E410 /* BookSectionHeaderView.swift in Sources */,
 				ADD1E90A25C5C12700E0DE96 /* ViewController.swift in Sources */,
 				ADD1E90625C5C12700E0DE96 /* AppDelegate.swift in Sources */,
@@ -477,6 +484,7 @@
 				ADD1E90825C5C12700E0DE96 /* SceneDelegate.swift in Sources */,
 				AD6E8C4A25C764850015E410 /* BookCategories.swift in Sources */,
 				ADD1E95825C61F9A00E0DE96 /* BookCell.swift in Sources */,
+				ADDDDC6225EC2B3600CBA280 /* BookCell2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,7 +657,7 @@
 		};
 		ADD1E92D25C5C12800E0DE96 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EAB3C0A53F9A733640099F5 /* Pods-nyt-best-selllers.debug.xcconfig */;
+			baseConfigurationReference = 88DE3337E20187E00F7DD4EF /* Pods-nyt-best-sellers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -669,7 +677,7 @@
 		};
 		ADD1E92E25C5C12800E0DE96 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5801E38992E79BCE1295DDA8 /* Pods-nyt-best-selllers.release.xcconfig */;
+			baseConfigurationReference = DA4B23939237B8F186DB630D /* Pods-nyt-best-sellers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -689,7 +697,7 @@
 		};
 		ADD1E93025C5C12800E0DE96 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9676E3CD19576DE4BD7974E0 /* Pods-nyt-best-selllersTests.debug.xcconfig */;
+			baseConfigurationReference = 2B375DE0002813CD9A1F25C0 /* Pods-nyt-best-sellersTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -712,7 +720,7 @@
 		};
 		ADD1E93125C5C12800E0DE96 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B784627367166B0552F36FB6 /* Pods-nyt-best-selllersTests.release.xcconfig */;
+			baseConfigurationReference = AAB8797B0F38C99EC06FCD91 /* Pods-nyt-best-sellersTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -735,7 +743,7 @@
 		};
 		ADD1E93325C5C12800E0DE96 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81A0EF290BE1D53F16DAD2B5 /* Pods-nyt-best-selllers-nyt-best-selllersUITests.debug.xcconfig */;
+			baseConfigurationReference = E82D7A10A466CB968EDA8AB9 /* Pods-nyt-best-sellers-nyt-best-sellersUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -756,7 +764,7 @@
 		};
 		ADD1E93425C5C12800E0DE96 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40D7FE94189224026E4286B3 /* Pods-nyt-best-selllers-nyt-best-selllersUITests.release.xcconfig */;
+			baseConfigurationReference = 1CEA1792EE2F58F615C9C867 /* Pods-nyt-best-sellers-nyt-best-sellersUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

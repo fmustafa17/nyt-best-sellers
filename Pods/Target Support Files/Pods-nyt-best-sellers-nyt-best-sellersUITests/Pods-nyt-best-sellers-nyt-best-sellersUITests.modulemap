@@ -1,0 +1,6 @@
+framework module Pods_nyt_best_sellers_nyt_best_sellersUITests {
+  umbrella header "Pods-nyt-best-sellers-nyt-best-sellersUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

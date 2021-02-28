@@ -10,8 +10,11 @@ import Kingfisher
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView1: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    
+    @IBOutlet weak var collectionView2: UICollectionView!
+    @IBOutlet weak var collectionView3: UICollectionView!
     
     let reuseIdentifier = "BookCell"
     let sectionInsets = UIEdgeInsets(top: 10.0,
@@ -22,13 +25,33 @@ class ViewController: UIViewController {
     let apiKey = Config.apiKey
     
     var books = [Book]()
+    //TODO: see if NYT has some access to all the displaynames
+    let displayNames = ["Hardcover Fiction", "Combined Print and E-book Fiction"]
+    //list_name : list_name_encoded
+    var categories = [
+        "Hardcover Fiction": "hardcover-fiction",
+        "Combined Print and E-book Fiction": "combined-print-and-e-book-fiction",
+        "": "paperback-trade-fiction"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = BookViewModel()
         loadBookDataFromService()
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        
+        // Initialize the collection views, set the desired frames
+//        collectionView.delegate = self
+//        collectionView.dataSource = self
+//
+//        collectionView2.delegate = self
+//        collectionView2.delegate = self
+//
+//        collectionView3.dataSource = self
+//        collectionView3.dataSource = self
+        
+        // Register the cells
+//        collectionView1.register(BookCell.self, forCellWithReuseIdentifier: "BookCell")
+        
         self.title = "New York Times Best Seller Books"
     }
     
@@ -56,22 +79,42 @@ class ViewController: UIViewController {
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-
-        if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath) as? BookSectionHeaderView {
-            sectionHeader.sectionHeaderLabel.text = "Placeholder"
-            return sectionHeader
-        }
-        return UICollectionReusableView()
-    }
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//
+//        if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath) as? BookSectionHeaderView {
+//            for name in displayNames {
+////                if let title = categories[name] {
+////                    sectionHeader.sectionHeaderLabel.text = title
+////                }
+//                sectionHeader.sectionHeaderLabel.text = name
+//                sectionHeader.sectionHeaderLabel.textAlignment = .left
+//            }
+//            return sectionHeader
+//        }
+//        return UICollectionReusableView()
+//    }
 
 }
 
 //MARK: - UICollectionViewDataSource
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookCell", for: indexPath) as! BookCell
+        
+        let cell = collectionView1.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! BookCell
         cell.bookCover.loadImageKf(urlString: books[indexPath.row].book_image, imageView: cell.bookCover)
+        
+        if collectionView == collectionView2 {
+            let cell2 = collectionView2.dequeueReusableCell(withReuseIdentifier: "BookCell2", for: indexPath) as! BookCell2
+            cell2.backgroundColor = .red
+            return cell2
+        }
+        
+        if collectionView == collectionView3 {
+            let cell3 = collectionView3.dequeueReusableCell(withReuseIdentifier: "BookCell3", for: indexPath) as! BookCell3
+            cell3.backgroundColor = .blue
+            return cell3
+        }
+        
         return cell
     }
 
@@ -115,6 +158,10 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 //                          minimumLineSpacingForSectionAt section: Int) -> CGFloat {
 //        return sectionInsets.left
 //      }
+    
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return displayNames.count
+//    }
 }
 
 extension UIImageView {
