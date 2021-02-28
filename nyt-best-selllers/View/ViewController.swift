@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView2: UICollectionView!
     @IBOutlet weak var collectionView3: UICollectionView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+
     let reuseIdentifier = "BookCell"
     let sectionInsets = UIEdgeInsets(top: 10.0,
                                      left: 10.0,
@@ -48,6 +50,10 @@ class ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
     }
     
     func loadBookDataFromService() {
@@ -143,7 +149,18 @@ extension ViewController: UICollectionViewDelegate {
         let bundle = Bundle(for: type(of: self))
         let bookDetailStoryboard = UIStoryboard(name: StoryboardName.bookDetail, bundle: bundle)
         let vc = bookDetailStoryboard.instantiateViewController(withIdentifier: Identifier.bookDetail) as! BookDetailViewController
-        vc.selectedBook = books[indexPath.row]
+        
+        if collectionView == collectionView1 {
+            vc.selectedBook = books[indexPath.row]
+        }
+
+        if collectionView == collectionView2 {
+            vc.selectedBook = books2[indexPath.row]
+        }
+
+        if collectionView == collectionView3 {
+            vc.selectedBook = books3[indexPath.row]
+        }
 
         self.navigationController?.pushViewController(vc, animated: true)
     }
