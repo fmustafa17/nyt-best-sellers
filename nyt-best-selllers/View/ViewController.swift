@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     
     var books = [Book]()
     var books2 = [Book]()
+    var books3 = [Book]()
     //TODO: see if NYT has some access to all the displaynames
     let displayNames = ["Hardcover Fiction", "Combined Print and E-book Fiction"]
     //list_name : list_name_encoded
@@ -40,6 +41,7 @@ class ViewController: UIViewController {
         viewModel = BookViewModel()
         loadBookDataFromService()
         loadBookDataFromServiceIntoCollectionView2()
+        loadBookDataFromServiceIntoCollectionView3()
         
         self.title = "New York Times Best Seller Books"
     }
@@ -87,6 +89,25 @@ class ViewController: UIViewController {
         }
     }
 
+    func loadBookDataFromServiceIntoCollectionView3() {
+        let baseUrl = "https://api.nytimes.com/svc/books/v3/lists/current/advice-how-to-and-miscellaneous.json?api-key="
+        let urlString = baseUrl + apiKey
+        
+        if let url = URL(string: urlString) {
+            if let data = try? Data(contentsOf: url) {
+                parseIntoCollectionView3(json: data)
+            }
+        }
+    }
+
+    func parseIntoCollectionView3(json: Data) {
+        let decoder = JSONDecoder()
+        
+        if let bookResponse = try? decoder.decode(Response.self, from: json) {
+            books3 = bookResponse.results.books
+        }
+    }
+
 }
 
 //MARK: - UICollectionViewDataSource
@@ -104,7 +125,7 @@ extension ViewController: UICollectionViewDataSource {
         
         if collectionView == collectionView3 {
             let cell3 = collectionView3.dequeueReusableCell(withReuseIdentifier: "BookCell3", for: indexPath) as! BookCell3
-            cell3.backgroundColor = .blue
+            cell3.bookCover.loadImageKf(urlString: books3[indexPath.row].book_image, imageView: cell3.bookCover)
             return cell3
         }
         
