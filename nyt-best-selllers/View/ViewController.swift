@@ -25,19 +25,21 @@ class ViewController: UIViewController {
     let apiKey = Config.apiKey
     
     var books = [Book]()
+    var books2 = [Book]()
     //TODO: see if NYT has some access to all the displaynames
     let displayNames = ["Hardcover Fiction", "Combined Print and E-book Fiction"]
     //list_name : list_name_encoded
     var categories = [
-        "Hardcover Fiction": "hardcover-fiction",
         "Combined Print and E-book Fiction": "combined-print-and-e-book-fiction",
-        "": "paperback-trade-fiction"
+        "Combined Print & E-Book Nonfiction": "combined-print-and-e-book-nonfiction",
+        "Advice, How-To & Miscellaneous": "advice-how-to-and-miscellaneous",
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = BookViewModel()
         loadBookDataFromService()
+        loadBookDataFromServiceIntoCollectionView2()
         
         self.title = "New York Times Best Seller Books"
     }
@@ -48,7 +50,7 @@ class ViewController: UIViewController {
     
     func loadBookDataFromService() {
         // TODO: add query params
-        let baseUrl = "https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key="
+        let baseUrl = "https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key="
         let urlString = baseUrl + apiKey
         
         if let url = URL(string: urlString) {
@@ -65,6 +67,25 @@ class ViewController: UIViewController {
             books = bookResponse.results.books
         }
     }
+    
+    func loadBookDataFromServiceIntoCollectionView2() {
+        let baseUrl = "https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-nonfiction.json?api-key="
+        let urlString = baseUrl + apiKey
+        
+        if let url = URL(string: urlString) {
+            if let data = try? Data(contentsOf: url) {
+                parseIntoCollectionView2(json: data)
+            }
+        }
+    }
+
+    func parseIntoCollectionView2(json: Data) {
+        let decoder = JSONDecoder()
+        
+        if let bookResponse = try? decoder.decode(Response.self, from: json) {
+            books2 = bookResponse.results.books
+        }
+    }
 
 }
 
@@ -77,7 +98,7 @@ extension ViewController: UICollectionViewDataSource {
         
         if collectionView == collectionView2 {
             let cell2 = collectionView2.dequeueReusableCell(withReuseIdentifier: "BookCell2", for: indexPath) as! BookCell2
-            cell2.backgroundColor = .red
+            cell2.bookCover.loadImageKf(urlString: books2[indexPath.row].book_image, imageView: cell2.bookCover)
             return cell2
         }
         
