@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = BookViewModel()
-        loadBookDataFromService
+        loadBookDataFromService()
         
         self.title = "New York Times Best Seller Books"
     }
