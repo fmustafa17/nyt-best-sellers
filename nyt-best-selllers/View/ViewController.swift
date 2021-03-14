@@ -44,14 +44,23 @@ class ViewController: UIViewController {
         loadBookDataFromService()
         loadBookDataFromServiceIntoCollectionView2()
         loadBookDataFromServiceIntoCollectionView3()
+
+        // Disable estimatedItemSize as this was causing the cells to resize when scrolling back
+        // Source: https://kosalajayasekara.com/fix-uicollectionview-cell-auto-resizing-after-scroll-in-xcode-11/
+        flowLayout.estimatedItemSize = .zero
         
         self.title = "New York Times Best Seller Books"
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-    }
-    
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+////        let remainingSpace = collectionView1.bounds.width - flowLayout.sectionInset.left
+////                            - flowLayout.sectionInset.right
+////                            - flowLayout.minimumInteritemSpacing * (Constant.numberOfItemsAcross - 1)
+////        let dimension = remainingSpace / Constant.numberOfItemsAcross
+////        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+//    }
+//    
     override func viewDidAppear(_ animated: Bool) {
         scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + 100)
     }
@@ -172,10 +181,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
       func collectionView(_ collectionView: UICollectionView,
                           layout collectionViewLayout: UICollectionViewLayout,
                           sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let paddingSpace = sectionInsets.left
-        let availableWidth = view.frame.width - paddingSpace
-        let widthPerItem = availableWidth
-        return CGSize(width: widthPerItem, height: widthPerItem)
+        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
       }
 }
 
