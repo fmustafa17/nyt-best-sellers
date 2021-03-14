@@ -26,7 +26,11 @@ class BookDetailViewController: UIViewController, SFSafariViewControllerDelegate
         bookCoverImage.loadImageKf(urlString: book.book_image, imageView: bookCoverImage)
         titleLabel.text = book.title
         authorLabel.text = book.author
-        descriptionLabel.text = book.description
+        if book.description == "" {
+            descriptionLabel.isHidden = true
+        } else {
+            descriptionLabel.text = book.description
+        }
     }
     
     @IBAction func openActionSheet(_ sender: Any) {
