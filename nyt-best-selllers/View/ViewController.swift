@@ -29,8 +29,11 @@ class ViewController: UIViewController {
     var books = [Book]()
     var books2 = [Book]()
     var books3 = [Book]()
-    //TODO: see if NYT has some access to all the displaynames
-    let displayNames = ["Hardcover Fiction", "Combined Print and E-book Fiction"]
+
+    @IBOutlet weak var fictionTitleLabel: UILabel!
+    @IBOutlet weak var nonfictionTitleLabel: UILabel!
+    @IBOutlet weak var adviceTitleLabel: UILabel!
+
     //list_name : list_name_encoded
     var categories = [
         "Combined Print and E-book Fiction": "combined-print-and-e-book-fiction",
@@ -45,24 +48,19 @@ class ViewController: UIViewController {
         loadBookDataFromServiceIntoCollectionView2()
         loadBookDataFromServiceIntoCollectionView3()
 
+        fictionTitleLabel.text = "Combined Print and E-book Fiction"
+        nonfictionTitleLabel.text = "Combined Print & E-Book Nonfiction"
+        adviceTitleLabel.text = "Advice, How-To & Miscellaneous"
+
         // Disable estimatedItemSize as this was causing the cells to resize when scrolling back
         // Source: https://kosalajayasekara.com/fix-uicollectionview-cell-auto-resizing-after-scroll-in-xcode-11/
         flowLayout.estimatedItemSize = .zero
         
         self.title = "New York Times Best Seller Books"
     }
-    
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-////        let remainingSpace = collectionView1.bounds.width - flowLayout.sectionInset.left
-////                            - flowLayout.sectionInset.right
-////                            - flowLayout.minimumInteritemSpacing * (Constant.numberOfItemsAcross - 1)
-////        let dimension = remainingSpace / Constant.numberOfItemsAcross
-////        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
-//    }
-//    
+
     override func viewDidAppear(_ animated: Bool) {
-        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + 100)
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + 200)
     }
     
     func loadBookDataFromService() {
